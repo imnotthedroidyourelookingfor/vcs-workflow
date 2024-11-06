@@ -24,7 +24,7 @@ variable "product" {
 }
 
 resource "local_file" "tf_file" {
-  content  = "\n This is a CSX ${var.product} workshop \n\n"
+  content  = "\nThis is a CSX ${var.product} workshop test \n\n"
   filename = "${path.module}/terraform.txt"
 }
 
