@@ -17,12 +17,6 @@ provider "local" {
   # Configuration options
 }
 
-variable "product" {
-  type        = string
-  description = "A HashiCorp product name"
-  default     = "X - Terraform"
-}
-
 resource "local_file" "tf_file" {
   content  = "\nThis is a CSX ${var.product} workshop test \n\n"
   filename = "${path.module}/terraform.txt"
