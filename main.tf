@@ -18,7 +18,7 @@ provider "local" {
 }
 
 resource "local_file" "tf_file" {
-  content  = "\nThis is a CSX ${var.product} workshop test \n\n"
+  content  = "\nThis is a CSX ${var.product} workshop test that deploys to ${var.target_env} \n\n"
   filename = "${path.module}/terraform.txt"
 }
 
